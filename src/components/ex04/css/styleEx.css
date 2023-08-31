@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.in_box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+}
