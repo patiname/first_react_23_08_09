@@ -11,6 +11,7 @@ import { Ex09 } from "./components/ex09/Ex09";
 import { MusicApp } from "./components/ex10/MusicApp";
 import { Ex11 } from "./components/ex11/Ex11";
 import { Ex12 } from "./components/ex12/Ex12";
+import { Ex15 } from "./components/ex15/Ex15";
 // =>함수 앞에 export를 할땐 객체 형태로 import 해 와야됨
 
 const App = () => {
@@ -20,35 +21,28 @@ const App = () => {
       <Main />
       <Footer /> */}
       {/* 2일차 */}
-
       {/* <PropsEx /> */}
       {/* <PropsEx02 />
       <PropsEx03 /> */}
       {/* <FoodMenu /> */}
       {/* 3일차 */}
-
       {/* <Ex04 /> */}
       {/* 4일차 */}
-
       {/* <Ex05 /> */}
       {/* 5~6일차 */}
-
       {/* <Ex07 /> */}
       {/* 7일차 */}
-
       {/* <Ex08 /> */}
       {/* 8일차 */}
-
       {/* <Ex09 /> */}
       {/* 9일차 */}
-
       {/* <MusicApp /> */}
       {/* 10일차 */}
-
       {/* <Ex11 /> */}
       {/* 11일차 */}
-
-      <Ex12 />
+      {/* <Ex12 /> */}
+      {/* 12~14일차 */}
+      <Ex15 />
     </>
   );
 };
