@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { styled } from "styled-components";
 import { ErrorMesaage } from "../components/ErrorMesaage";
+import { userData } from "../userData";
+import { useNavigate } from "react-router-dom";
 
 const Wrap = styled.div`
   display: flex;
@@ -50,14 +52,37 @@ const Button = styled.button`
 `;
 
 export const Login = () => {
+  const nav = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
+    setError,
   } = useForm();
 
-  const onSubmit = () => {
-    console.log("로그인 버튼 클릭함!");
+  const onSubmit = (data) => {
+    // console.log(data.username);
+    // console.log(data.password);
+    // const inputUsername = data.username;
+    // const inputPassword = data.password;
+    const { username, password } = data;
+    // =>user가 input에 입력한 value값을 비구조화 할당으로 표현
+
+    if (username !== userData.username) {
+      setError("username", {
+        message: "아이디가 틀렸습니다",
+      });
+    }
+
+    if (password !== userData.password) {
+      setError("password", {
+        message: "비밀번호가 틀렸습니다",
+      });
+    }
+
+    nav("/");
+    // =>경로를 지정하여 페이지를 이동 시킬 수 있음
   };
   // console.log(errors);
   // console.log(errors && errors.username && errors.username.message);
@@ -65,7 +90,7 @@ export const Login = () => {
   // *옵셔널체이닝(optional chaining)
   // =>중첩 객체를 에러 없이 안전하게 접근할 수 있음
 
-  console.log(isValid);
+  // console.log(isValid);
 
   return (
     <Wrap>

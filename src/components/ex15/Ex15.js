@@ -1,9 +1,9 @@
-import { Login } from "./pages/Login";
+import { Router } from "./Router";
 
 export const Ex15 = () => {
   return (
     <div>
-      <Login />
+      <Router />
     </div>
   );
 };
